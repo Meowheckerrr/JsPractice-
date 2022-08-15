@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="myDIV" style="padding:16px;background-color:lightgray">
+        Meowhecker<br/><br/>
+        <input type="text" id="inputText">
+        <button onclick="test()">send</button>   
+    </div>
+    count:
+    <p id="count"></p>
+    <div id="textArea" style="color:pink ;"></div>
+    
+<script>
+
+
+    //const para = document.createElement("p");     //object actions 
+    //para.innerText = "meowmeow";                  //object values  
+
+    document.body.appendChild(para);                       //appends the element to body. 
+    document.getElementById("myDIV").appendChild(para);    //get div id and append it to the specified element  
+
+    function test(){
+
+        const textNode = document.createTextNode(inputText.value); //get a text from the input 
+
+        if(inputText.value == ""){
+           alert("凸"); 
+        }
+
+        else{
+
+            const parament = document.createElement("p");
+            const elementCount = document.getElementById("textArea").childElementCount;
+            
+            parament.appendChild(textNode);      
+            document.getElementById("textArea").appendChild(parament);
+            document.getElementById("count").innerHTML = elementCount+1;
+            
+        }
+    }
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form1" onsubmit="caculateIt();return false;">
+        5+5<br/>
+        <input type="radio" name="answer" id="" value ="2"> 2
+        <input type="radio" name="answer" id="" value ="10"> 10
+        <input type="radio" name="answer" id="" value ="30"> 30
+        
+        <input type="submit" value="send">
+    </form>
+
+
+    <script>
+        function caculateIt(){
+            const opts = document.forms["form1"].elements["answer"];
+            if(opts[1].checked){
+                alert("good job");
+            }
+            else{
+                alert("faild");
+            }
+        }
+    </script>
+</body>
+</html>

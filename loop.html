@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>
+        Name:
+        <input type="text" name="name" id="input">
+        <button onclick="addName()">New</button>
+    </p>
+
+
+    <script>
+
+        
+        var parent = document.getElementById("input").parentNode;
+        for(var counter = 0; counter < 5 ; counter++){
+            parent.appendChild(document.createElement("p"));
+            parent.appendChild(document.createTextNode("Name"));
+            parent.appendChild(document.createElement("input"));
+        }
+
+
+        function addName(){
+
+            const inputs = document.getElementsByTagName("input");
+            const list = document.getElementById("text");
+
+            for(var counter=0;counter<5;counter++){
+
+                if(inputs[counter].value ==""){
+                        
+                }
+                else{
+                    const textNode = documet.createTextNode(inputs[counter].value);
+
+                    const NewNode = document.createElement("li");
+
+                    NewNode.appendChild(textNode);
+
+                    list.appendChild(NewNode);
+                } 
+
+
+            }
+
+
+        }
+
+    </script>
+
+
+    <ul id="text"></ul>
+    
+</body>
+</html>
